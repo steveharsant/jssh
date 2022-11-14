@@ -40,3 +40,17 @@ Host myHost
 4. Connect with `jssh` using: `/path/to/jssh myHost`
 
 > ***Note:*** You can append `debug` to the above command for debugging information. No other options are available at this time
+
+
+## Building
+
+`jssh` is prebuilt for Windows and Linux x86 machines. For Mac's and/or ARM based machines, build a standalone binary with:
+
+```shell
+git clone https://github.com/steveharsant/jssh
+cd jssh
+pip install -r requirements.txt
+pyinstaller --onefile ./jssh.py
+```
+
+The binary will be found in the `./dist` directory once built.
